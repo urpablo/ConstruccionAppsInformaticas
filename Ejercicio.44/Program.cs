@@ -16,30 +16,43 @@ namespace Ejercicio._44
 
             do
             {
-                Console.WriteLine("Ingrese un comando");
+                Console.WriteLine("Ingrese un comando: \n"+
+                    "alta [nombre]\n"+
+                    "baja [número entero]\n"+
+                    "baja [nombre]\n"+
+                    "mostrar\n"+
+                    "fin\n");
                 comando = Console.ReadLine();
-                if ()
+                if (comando.ToUpper().Contains("ALTA"))
                 {
+                    ListaNombres.Add(comando.Substring(4, comando.Length-4).Trim());
 
                 }
-                else if ()
+                else if (comando.ToUpper()=="FIN")
                 {
-
+                    flag = true;
+        
                 }
-                else if ()
+                else if (comando.ToUpper() == "MOSTRAR")
                 {
-
+                    foreach (string s in ListaNombres)
+                        Console.WriteLine(s);
                 }
-                else if ()
-                {
+             //   else if ()
+              //  {
 
-                }
+              //  }
                 else
                 {
-
+                    Console.WriteLine("Debe ingresar un comando valido");
                 }
 
             } while (flag == false);
+
+            foreach (string s in ListaNombres)
+                Console.WriteLine(s);
+
+            Console.ReadKey();
         }
     }
 }
