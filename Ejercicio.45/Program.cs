@@ -25,16 +25,16 @@ namespace Ejercicio._45
                 do
                 {
                     flag = false;
-                    Console.WriteLine("ingrese un numero de registro a cargar o 0 para dejar de hacerlo\n");
+                    Console.WriteLine("\ningrese un numero de registro a cargar o 0 para dejar de hacerlo\n");
                     strRegistro = Console.ReadLine();
                     if (int.TryParse(strRegistro, out Registro) == false)
                     {
-                        Console.WriteLine("Debe ingresar un numero entero no vacio\n");
+                        Console.WriteLine("\nDebe ingresar un numero entero no vacio\n");
                         flag = true;
                     }
                     else if (DiccionarioDeAlumnos.ContainsKey(Registro) == true)
                     {
-                        Console.WriteLine("El valor no puede estar repetido\n");
+                        Console.WriteLine("\nEl valor no puede estar repetido\n");
                         flag = true;
                     }
                 } while (flag == true);
@@ -44,11 +44,11 @@ namespace Ejercicio._45
                     do
                     {
                         strFlag = false;
-                        Console.WriteLine("Ingrese un nombre para el registro\n");
+                        Console.WriteLine("\nIngrese un nombre para el registro\n");
                         Nombre = Console.ReadLine();
                         if (Nombre == "")
                         {
-                            Console.WriteLine("Debe ingresar un nombre\n");
+                            Console.WriteLine("\nDebe ingresar un nombre\n");
                             strFlag = true;
 
                         }
@@ -77,16 +77,16 @@ namespace Ejercicio._45
                 do
                 {
                     flag = false;
-                    Console.WriteLine("ingrese codigo a buscar\n");
+                    Console.WriteLine("\ningrese codigo a buscar\n");
                     strBuscaReg = Console.ReadLine();
                     if (int.TryParse(strBuscaReg, out BuscarReg) == false)
                     {
-                        Console.WriteLine("Debe ingresar un numero entero no vacio\n");
+                        Console.WriteLine("\nDebe ingresar un numero entero no vacio\n");
                         flag = true;
                     }
                     else if (DiccionarioDeAlumnos.ContainsKey(BuscarReg) == false && BuscarReg!=0)
                     {
-                        Console.WriteLine("El valor no se encuentra, ingrese otro\n");
+                        Console.WriteLine("\nEl valor no se encuentra, ingrese otro\n");
                         flag = true;
                     }
 

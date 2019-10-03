@@ -55,15 +55,27 @@ namespace Ejercicio._47
                     {
                         case "1":
                             caja1 = "LIBRE";
+                            if (ColaAfiliados.Count > 0)
+                            {
+                                caja1 = "OCUPADO con " + ColaAfiliados.Dequeue();
+                            }
                             
                             break;
 
                         case "2":
                             caja2 = "LIBRE";
+                            if (ColaAfiliados.Count > 0)
+                            {
+                                caja2 = "OCUPADO con " + ColaAfiliados.Dequeue();
+                            }
                             break;
 
                         case "3":
                             caja2 = "LIBRE";
+                            if (ColaAfiliados.Count > 0)
+                            {
+                                caja3 = "OCUPADO con " + ColaAfiliados.Dequeue();
+                            }
                             break;
 
                         default:
